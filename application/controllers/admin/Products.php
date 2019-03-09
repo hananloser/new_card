@@ -11,14 +11,15 @@ class Products extends CI_Controller
         $this->load->library('form_validation');
 
     }
-    public function index()
-    {
+    
+
+    public function index(){
         $this->session->set_flashdata('success', 'success');
         $data['judul'] = "LIST ANGGOTA : ";
         $data['card'] = $this->product_model->get();
         $this->load->view('index', $data);
-
     }
+
     public function tambah()
     {
 
